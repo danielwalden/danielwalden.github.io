@@ -1,0 +1,27 @@
+<svg width="256" height="256" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<defs>
+			<clipPath id="squircleclip">
+			<path d="	M 0 96
+							C 0 0, 0 0, 96 0
+							L 160 0
+							C 256 0, 256 0, 256 96
+							L 256 160
+							C 256 256, 256 256, 160 256
+							L 96 256
+							C 0 256, 0 256, 0, 160
+							Z
+							" stroke="black" fill="blue"/>
+			</clipPath>
+		</defs>
+		<image href="/i/apa_businesscard_1085.jpg" x="0" y="0" height="256px" width="256px" preserveAspectRatio="none" clip-path="url(#squircleclip)"/>
+		<path d="	M 0 96
+							C 0 0, 0 0, 96 0
+							L 160 0
+							C 256 0, 256 0, 256 96
+							L 256 160
+							C 256 256, 256 256, 160 256
+							L 96 256
+							C 0 256, 0 256, 0, 160
+							Z
+							" stroke="black" fill="transparent"/>
+	</svg>

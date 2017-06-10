@@ -1,0 +1,119 @@
+<html><head><style type="text/css">
+
+body {background:#9cf;}
+
+</style>
+
+</head><body>
+			
+	<h1>'Ello World!</h1>
+	
+	<svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" class="mosdef">
+	<defs>
+		<clipPath id="clippery" clipPathUnidts="objectBoundingBox">
+			<path d="	M 0 96
+							C 0 0, 0 0, 96 0
+							L 160 0
+							C 256 0, 256 0, 256 96
+							L 256 160
+							C 256 256, 256 256, 160 256
+							L 96 256
+							C 0 256, 0 256, 0, 160
+							Z
+							" stroke="black" fill="blue"/>
+		</clipPath>
+	</defs>
+	</svg>
+	
+	<br />
+
+	<a href="i/apa_banner_640.jpg" type="image/jpg">
+	<svg width="256" height="256" xmlns="http://www.w3.org/2000/svg" aria-label="uno" role="img">
+		<defs>
+			<clipPath id="squircle">
+			<path d="	M 0 96
+							C 0 0, 0 0, 96 0
+							L 160 0
+							C 256 0, 256 0, 256 96
+							L 256 160
+							C 256 256, 256 256, 160 256
+							L 96 256
+							C 0 256, 0 256, 0, 160
+							Z
+							" stroke="black" fill="blue"/>
+			</clipPath>
+		</defs>
+		<image xlink:href="i/apa_businesscard_1085.jpg" x="0" y="0" height="256px" width="256px" preserveAspectRatio="none" clip-path="url(#squircle)" />
+	</svg>
+	</a>
+	
+	<svg width="256" height="256" xmlns="http://www.w3.org/2000/svg" aria-label="Dos" role="presentation">
+		<image xlink:href="i/apa_businesscard_1085.jpg" x="0" y="0" height="256px" width="256px" preserveAspectRatio="none" clip-path="url(#clippery)" />
+	</svg>
+	
+	<img src="test.svg" width="256" height="256" aria-label="Tres" role="img" />
+	<img src="squircle.svg" width="256" height="256" aria-label="Quatro" />
+	
+	<br /><br />
+	
+	<div id="insertsvghere">
+	</div>
+	
+	<h2>Future plans: use javascript and ajax loading to add the clip after the fact, using className. Also it can just be a fill, it doesn't need to be a clip. Actually not doing svg inline is the best way. As long as you don't use use you are okay. JUST MAKE THE CLIP PATH AN EXTERNAL SVG TO REFERENCE. SAVES CODE. Whoops, turns out that webkit browsers explode when you try to reference external clip paths, so just define it at the top of the page. Use aria label for accessibility.</h2>
+	
+	<script>
+		
+		var cc_corner_holder = document.getElementById('insertsvghere');
+		var cc_corner_receiver = document.getElementById('cc_corner_receiver');
+		
+		// the base svg element
+		var cc_corner_svg = document.createElementNS("http://www.w3.org/2000/svg", 'svg');
+		cc_corner_svg.setAttribute('width', '256');
+		cc_corner_svg.setAttribute('height', '256');
+		cc_corner_svg.setAttribute('xmlns', "http://www.w3.org/2000/svg");
+		cc_corner_svg.setAttribute('aria-label', "Cinco");
+		cc_corner_svg.setAttribute('role', "img");
+		
+		//clip path definition tag and clip path
+		var cc_corner_svg_defs = document.createElementNS("http://www.w3.org/2000/svg", 'defs');
+		var cc_corner_svg_defs_clippath = document.createElementNS("http://www.w3.org/2000/svg", 'clipPath');
+		cc_corner_svg_defs_clippath.setAttribute('id', 'cc_corner_clipper');
+		
+		// What will be the clip path
+		var cc_corner_svg_clippath_path = document.createElementNS("http://www.w3.org/2000/svg", 'path');
+		
+		cc_corner_svg_clippath_path.setAttribute('d','M 0 96 C 0 0, 0 0, 96 0 L 160 0 C 256 0, 256 0, 256 96 L 256 160 C 256 256, 256 256, 160 256 L 96 256 C 0 256, 0 256, 0, 160 Z');
+		cc_corner_svg_clippath_path.setAttribute('stroke', 'black');
+		cc_corner_svg_clippath_path.setAttribute('fill', 'black');
+		
+		// creating he image
+		var cc_corner_svg_image = document.createElementNS("http://www.w3.org/2000/svg", 'image');
+		cc_corner_svg_image.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', 'i/apa_businesscard_1085.jpg');
+		cc_corner_svg_image.setAttribute('x', '0');
+		cc_corner_svg_image.setAttribute('y', '0');
+		cc_corner_svg_image.setAttribute('width', '256px');
+		cc_corner_svg_image.setAttribute('height', '256px');
+		cc_corner_svg_image.setAttribute('preserveAspectRatio', 'none');
+		cc_corner_svg_image.setAttribute('clip-path', 'url(#cc_corner_clipper)');
+		
+		
+		// Putting the SVG in its place
+		cc_corner_holder.appendChild(cc_corner_svg);
+		cc_corner_svg.appendChild(cc_corner_svg_defs);
+		cc_corner_svg_defs.appendChild(cc_corner_svg_defs_clippath);
+		cc_corner_svg_defs_clippath.appendChild(cc_corner_svg_clippath_path);
+		cc_corner_svg.appendChild(cc_corner_svg_image);
+		
+		/*
+			
+			var newElement = document.createElementNS("http://www.w3.org/2000/svg", 'path'); //Create a path in SVG's namespace
+newElement.setAttribute("d","M 0 0 L 10 10"); //Set path's data
+newElement.style.stroke = "#000"; //Set stroke colour
+newElement.style.strokeWidth = "5px"; //Set stroke width
+svg.appendChild(newElement);
+
+*/
+		
+	</script>
+
+</body></html>

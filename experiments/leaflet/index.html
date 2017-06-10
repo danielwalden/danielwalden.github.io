@@ -1,0 +1,50 @@
+<html><head>
+	<meta name="viewport" content="width=device-width" />
+	<title>Daniel Walden's Portfolio</title>
+	<style type="text/css">
+		body {margin:0;}
+		#portfolio {
+			width:100%;
+			height:100%;
+		}
+	</style>
+	<link rel="stylesheet" href="leaflet.css" />
+	
+	
+</head><body>
+	
+	<div id="portfolio"></div>
+	<script src="leaflet.js"></script>
+	<script type="text/javascript">
+    var map = L.map('portfolio', {
+    	crs: L.CRS.Simple,
+    }).setView([-64.0, 96.0], 1);
+        
+    var layer = L.tileLayer('portfoliomap/{z}-{x}-{y}.jpg', {
+			maxZoom: 6,
+			detectRetina: true,
+			attribution: 'Portfolio by Daniel Walden',
+			
+		}).addTo(map); 
+       
+    //Loading the Zoomify tile layer, notice the URL
+    /*
+    var layer = L.tileLayer.zoomify('zoomify-portfolio/{g}/{z}-{x}-{y}.jpg', {
+			width: 10544,
+			height: 7758,
+			detectRetina: true,
+			attribution: 'Portfolio by Daniel Walden',
+			
+		}).addTo(map);
+		*/
+		//Setting the view to our layer bounds, set by our Zoomify plugin
+		//map.fitBounds(layer.options.bounds);
+		//map.fitBounds(layer.options.bounds);
+		//map.setZoom(2);
+		
+		//alert(L.Browser.retina);
+		
+		// ZOOMIFY NEEDS TO RETURN IMAGES THAT ARE ALWAYS 256x256. IT DOESN'T DO THAT ON EDGES
+   </script>
+	
+</body></html>
