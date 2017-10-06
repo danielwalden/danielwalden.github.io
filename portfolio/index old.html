@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,">
+		<title>Daniel Walden's Portfolio</title>
+		<link rel="stylesheet" href="main.css">
+		<script>
+			//get the scale value of the page. useful for canvas elements, and maybe svg
+			var i;
+			function doyathing() {
+				
+				i = document.body;
+				//alert(window.getComputedStyle(i, null).getPropertyValue('transform'));
+				
+			}
+			document.addEventListener('DOMContentLoaded', doyathing);
+		</script>
+	</head>
+	<body>
+		
+		<header>
+			<h1>Daniel Walden</h1>
+			<img src="me.jpg" alt="Photo of Daniel Walden">
+			<p>Design with a content width of 672. There are 96 columns, each with a width of 7. Wait: If you lop off the edges to go edge-to-edge, 226 (off 228) columns, 678 total, 3 pixel columns(Multiples of 12). The total width should be 960 with full retina. Based on screen size, scale up the page 150%, 200%.</p>
+			<p>672 total width, 2 pixel columns, 336 columns. Don't lop off anything</p>
+			<p>672, 4 pixel columns, 168 columns. Don't lop anything.</p>
+		</header>
+		
+		<section id="LE_newsletters">
+			<h2>LuxExchange Newsletters</h2>
+			<img src="i/le_blackfriday_newsletter_1920.jpg" height="320">
+			<img   src="i/le_christmas_newsletter_1920.jpg" height="320">
+			<img     src="i/le_january_newsletter_1920.jpg" height="320">
+			<img  src="i/le_mothersday_newsletter_1280.jpg" height="320">
+			<img     src="i/le_october_newsletter_1920.jpg" height="320">
+			<img src="i/le_springbreak_newsletter_1920.jpg" height="320">
+			<ul>
+				<li>Adobe Photoshop</li>
+			</ul>
+		</section>
+		
+		<section id="APG_business_card">
+			<h2>Anything Pawn and Gun Business Card</h2>
+		</section>
+		
+		<section id="BR_advertising">
+			<h2>Bent Rod Outfitters Advertising</h2>
+		</section>
+		
+		<section id="SS_websites">
+			<h2>SquareSpace Websites</h2>
+		</section>
+	</body>
+</html>

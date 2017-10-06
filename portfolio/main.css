@@ -1,0 +1,332 @@
+body {
+	background:blue;
+}
+/*
+@media only screen and (min-width:960px) {
+	header, #LE_newsletters, #APG_business_card, #BR_advertising, #SS_websites {
+		transform: scale(1.25);
+	}
+}
+@media only screen and (min-width:1200px) {
+	#wrapper2 {
+		transform: scale(1.5);
+	}
+}
+
+@media only screen and (min-width:1440px) {
+	#wrapper2 {
+		transform: scale(1.75);
+	}
+}
+@media only screen and (min-width:1680px) {
+	#wrapper2 {
+		transform: scale(2);
+	}
+}
+*/
+/* NEED TO FIX THE SCROLLING TO THE RIGHT ISSUE. ALSO TEST ON FF IE. */
+
+@media only screen and (min-width: 678px) {
+	
+body {
+	margin: 0;
+	background: #333;
+	color: #111;
+	font-family: "Helvetica Neue", Helvetica, Arial;
+}
+
+h1 {
+	font-size:36px;
+	margin: 6px 4px 6px 0;
+}
+
+h2 {
+	font-size: 36px;
+	line-height:1.1;
+	text-align:right;
+	margin:0;
+}
+
+p {
+	font-family: "Georgia";
+	font-size: 18px;
+	line-height:1.25;
+}
+
+a img {border:0;}
+
+.holder {
+	width:672px;
+	padding:32px 0 32px 0;
+	margin: 0 0 0 144px;
+}
+
+.collection .collection_item {
+	float:left;
+	margin: 6px 4px;
+}
+
+.collection::after {
+	content:'';
+	display:block;
+	clear:both;
+}
+
+.tools {
+	width:216px;
+}
+.tools::after {
+	content:'';
+	display:block;
+	clear:both;
+}
+
+.tools p {
+	height:32px;
+	float:left;
+	margin:0 4px 8px 4px;
+	width:216px;
+}
+
+.tools p img {
+	float:left;
+}
+
+.tools p span {
+	float:left;
+	font-weight: bold;
+	font-family: "Helvetica Neue", Helvetica, Arial;
+	font-size: 12px;
+	letter-spacing:0.2em;
+	text-transform: uppercase;
+	margin:10px 0 0 8px
+}
+
+header, #LE_newsletters, #APG_business_card, #BR_advertising, #SS_websites {
+	width: 960px;
+	margin: 0 auto;
+	
+}
+
+/* ----- Header Specific Styling ----- */
+
+header {
+	text-align:right;
+	background:linear-gradient(#cceddf 0%, #cce2ff 100%);
+	color:#009c73;
+	position: relative;
+}
+
+header p {
+	font-weight: bold;
+	font-family: "Helvetica Neue", Helvetica, Arial;
+	font-size: 12px;
+	letter-spacing:0.2em;
+	text-transform: uppercase;
+	margin: 6px 4px 6px 0;
+}
+
+header a {
+	color:#0085b6;
+}
+
+/* ----- LE Specific Styling ----- */
+
+#LE_newsletters {
+	color: #ffe8b8;
+	position:relative;
+	z-index: 1;
+}
+#LE_newsletters::before {
+	content:'';
+	display:block;
+	position:absolute;
+	top:0; right:0; bottom:0; left:0;
+	z-index:-1;
+	background-image:url("i/le_cloudy.jpg");
+	background-size:100% 100%;
+	opacity: 0.12;
+}
+#LE_newsletters::after {
+	content:'';
+	display:block;
+	position:absolute;
+	top:0; right:0; bottom:0; left:0;
+	z-index:-2;
+	background-image:url("i/le_lvtile.png");
+	background-position: top center;
+	background-size:128px 128px;
+}
+#LE_newsletters h2 {
+	text-align: right;
+	margin: -58px 0 8px 228px;
+	width: 440px;
+}
+
+#LE_newsletters .description {
+	width:328px;
+	margin: 0 0 0 340px;
+	line-height: 1.25;
+}
+
+#LE_newsletters .collection img {
+	box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.6);
+}
+
+#LE_newsletters .tools {
+	margin-top:-78px;
+}
+
+/* ----- APG Specific Styling ----- */
+
+#APG_business_card {
+	color: #3c5e2c;
+	z-index:1;
+	position:relative;
+}
+#APG_business_card::before {
+	content:'';
+	display:block;
+	position:absolute;
+	top:0; right:0; bottom:0; left:0;
+	z-index:-1;
+	background-image:url("i/apa_sidefade.jpg");
+	background-size:100% 100%;
+	opacity: 0.15;
+}
+#APG_business_card::after {
+	content:'';
+	text-align:center;
+	display:block;
+	position:absolute;
+	top:0; right:0; bottom:0; left:0;
+	z-index:-2;
+	background-image:url("i/apa_apgbrand.png"),
+	                 url("i/apa_woodtexture.jpg");
+	background-position: center center,
+	                     center center;
+	background-repeat:no-repeat, no-repeat;
+	background-size:800px 800px,
+	                100% 100%;
+}
+#APG_business_card .collection img {
+	box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.6);
+}
+#APG_business_card .collection p {
+	font-family: "Helvetica Neue", Helvetica, Arial;
+	font-weight: bold;
+	font-size: 12px;
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
+	text-align: right;
+	color: #3c5e2c;
+	margin:6px 0;
+}
+#APG_business_card h2 {
+	text-align:right;
+	margin:6px 4px 0 0;
+}
+#APG_business_card .tools {
+	margin-top: -75px;
+}
+
+/* ----- BR Specific Styling ----- */
+
+#BR_advertising {
+	background: #537ce5;
+	color: rgb(140,25,30);
+	z-index: 1;
+	position: relative;
+}
+#BR_advertising::before {
+	content:'';
+	display: block;
+	position: absolute;
+	top:0; right:0; bottom:0; left:0;
+	z-index:-1;
+	background-image:url("i/br_waves.jpg");
+	background-size:cover;
+}
+#BR_advertising .collection img {
+	box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.6);
+}
+#BR_advertising .collection p {
+	font-family: "Helvetica Neue", Helvetica, Arial;
+	font-weight: bold;
+	font-size: 12px;
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
+	text-align: right;
+	color: #910b0b;
+	margin:6px 0;
+}
+#BR_advertising .collection a {
+	text-decoration: none;
+}
+#BR_advertising h2 {
+	text-align: right;
+	margin: -84px 0 8px 332px;
+	font-size:35px;
+	width: 336px;
+}
+#BR_advertising .description {
+	width:328px;
+	margin: 0 0 0 340px;
+	line-height: 1.25;
+}
+#BR_advertising .tools {
+	margin: -76px 0 12px 0;
+}
+
+/* ----- SS Specific Styling ----- */
+
+#SS_websites {
+	background: #005872;
+	color: #d1f1fb;
+	z-index: 1;
+	position: relative;
+}
+#SS_websites::before {
+	content:'';
+	display:block;
+	position:absolute;
+	top:0; right:0; bottom:0; left:0;
+	z-index: -1;
+	background-image:url("i/ss_blueprint.jpg");
+	background-size: 32px;
+	background-position: center center;
+	opacity: 0.65;
+	border:4px solid #b1d1fb;
+	margin:16px;
+}
+#SS_websites .collection_item {
+	width:160px;
+}
+#SS_websites .middle {
+	width:328px;
+}
+#SS_websites .collection_item .caption {
+	font-family: "Helvetica Neue", Helvetica, Arial;
+	font-weight: bold;
+	font-size: 12px;
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
+	text-align: right;
+	color: #eae8f9;
+	margin:6px 0;
+}
+#SS_websites .description {
+	line-height: 1.25;
+	font-family: "Times New Roman";
+	font-size: 18px;
+	line-height:1.25;
+	margin:6px 0 8px 0;
+}
+#SS_websites .tools p {
+	height:32px;
+	float:left;
+	margin:0 4px 8px 0;
+	width:216px;
+}
+
+}
