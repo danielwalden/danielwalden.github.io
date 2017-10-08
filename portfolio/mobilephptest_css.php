@@ -1,3 +1,9 @@
+<?php header( 'Content-Type: text/css' );
+
+$textcolor = '#36c';
+
+?>
+
 body {
 	margin:0;
 	background:blue;
@@ -37,30 +43,10 @@ header, #LE_newsletters, #APG_business_card, #BR_advertising, #SS_websites {
 }
 
 #LE_newsletters {
-	color: #ffe8b8;
+	color: <?php echo $textcolor; ?>/*#ffe8b8*/;
 	background:brown;
 	position:relative;
 	z-index: 1;
-}
-#LE_newsletters::before {
-	content:'';
-	display:block;
-	position:absolute;
-	top:0; right:0; bottom:0; left:0;
-	z-index:-1;
-	background-image:url("i/le_cloudy.jpg");
-	background-size:100% 100%;
-	opacity: 0.10;
-}
-#LE_newsletters::after {
-	content:'';
-	display:block;
-	position:absolute;
-	top:0; right:0; bottom:0; left:0;
-	z-index:-2;
-	background-image:url("i/le_lvtile.png");
-	background-position: top center;
-	background-size:25vw 25vw;
 }
 
 #APG_business_card {
@@ -71,31 +57,6 @@ header, #LE_newsletters, #APG_business_card, #BR_advertising, #SS_websites {
 }
 #APG_business_card .collection_item {width:50%;}
 #APG_business_card .collection_item p {text-decoration: none; color:#3c5e2c;}
-#APG_business_card::before {
-	content:'';
-	display:block;
-	position:absolute;
-	top:0; right:0; bottom:0; left:0;
-	z-index:-1;
-	background-image:url("i/apa_sidefade.jpg");
-	background-size:125vw 100%;
-	opacity: 0.25;
-}
-#APG_business_card::after {
-	content:'';
-	text-align:center;
-	display:block;
-	position:absolute;
-	top:0; right:0; bottom:0; left:0;
-	z-index:-2;
-	background-image:url("i/apa_apgbrand.png"),
-	                 url("i/apa_woodtexture.jpg");
-	background-position: center center,
-	                     center center;
-	background-repeat:no-repeat, no-repeat;
-	background-size:100vw 100vw,
-	                100% 100%;
-}
 
 #BR_advertising {
 	background: #537ce5;
@@ -105,15 +66,6 @@ header, #LE_newsletters, #APG_business_card, #BR_advertising, #SS_websites {
 }
 #BR_advertising .collection_item p { color:rgb(140,25,30); }
 #BR_advertising .collection_item a {text-decoration: none;}
-#BR_advertising::before {
-	content:'';
-	display: block;
-	position: absolute;
-	top:0; right:0; bottom:0; left:0;
-	z-index:-1;
-	background-image:url("i/br_waves.jpg");
-	background-size:cover;
-}
 
 #SS_websites {
 	background: #005872;
@@ -135,17 +87,3 @@ header, #LE_newsletters, #APG_business_card, #BR_advertising, #SS_websites {
 #SS_websites .tools {margin:0 0 0 1vw;}
 #SS_websites .tools p {margin:1vw 0;}
 #SS_websites .tools p img {width:8vw; box-shadow: none; margin:0;}
-#SS_websites::before {
-	content:'';
-	display:block;
-	position:absolute;
-	top:0; right:0; bottom:0; left:0;
-	z-index: -1;
-	background-image:url("i/ss_blueprint.jpg");
-	background-size: 6vw;
-	background-position: center center;
-	opacity: 0.65;
-	border-top:1vw solid #b1d1fb;
-	border-bottom:1vw solid #b1d1fb;
-	margin:2vw 0;
-}
