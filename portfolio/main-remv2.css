@@ -1,0 +1,348 @@
+
+/* could clean up columns in desktop version by new img 100% width understanding */
+
+@media only screen and (min-width:960px) {
+	html {
+		font-size:25px !important;
+	}
+}
+@media only screen and (min-width:1200px) {
+	html {
+		font-size:30px !important;
+	}
+}
+
+@media only screen and (min-width:1440px) {
+	html {
+		font-size:35px !important;
+	}
+}
+@media only screen and (min-width:1680px) {
+	html {
+		font-size:40px !important;
+	}
+}
+
+@media only screen and (min-width: 678px) {
+	
+html {font-size:20px;}
+	
+body {
+	margin: 0;
+	overflow-x:hidden;
+	background: #333;
+	color: #111;
+	font-family: "Helvetica Neue", Helvetica, Arial;
+}
+
+#wrapper {
+	overflow-x:hidden;
+}
+#wrapper2 {
+	width:33.6rem;
+	margin:0 auto;
+}
+
+h1 {
+	font-size:1.8rem;
+	margin: 0.3rem 0.2rem 0.3rem 0;
+}
+
+h2 {
+	font-size: 1.8rem;
+	line-height:1.1;
+	text-align:right;
+	margin:0;
+}
+
+p {
+	font-family: "Georgia";
+	font-size: 0.9rem;
+	line-height:1.25;
+}
+
+a img {border:0;}
+
+.holder {
+	width:33.6rem;
+	padding:1.6rem 0 1.6rem 0;
+	margin: 0 0 0 7.2rem;
+}
+
+.collection .collection_item {
+	float:left;
+	margin: 0.3rem 0.2rem;
+}
+
+.collection::after {
+	content:'';
+	display:block;
+	clear:both;
+}
+
+.tools {
+	width:10.8rem;
+}
+.tools::after {
+	content:'';
+	display:block;
+	clear:both;
+}
+
+.tools p {
+	height:1.6rem;
+	float:left;
+	margin:0 0.2rem 0.4rem 0.2rem;
+	width:10.6rem;
+}
+
+.tools p img {
+	float:left;
+	width:1.6rem;
+}
+
+.tools p span {
+	float:left;
+	font-weight: bold;
+	font-family: "Helvetica Neue", Helvetica, Arial;
+	font-size: 0.6rem;
+	letter-spacing:0.04em;
+	text-transform: uppercase;
+	margin:0.5rem 0 0 0.4rem;
+}
+
+header, #LE_newsletters, #APG_business_card, #BR_advertising, #SS_websites {
+	width: 48rem;
+	margin-left: -7.2rem
+}
+
+/* ----- Header Specific Styling ----- */
+
+header {
+	text-align:right;
+	background:linear-gradient(#cceddf 0%, #cce2ff 100%);
+	color:#009c73;
+	position: relative;
+}
+
+header p {
+	font-weight: bold;
+	font-family: "Helvetica Neue", Helvetica, Arial;
+	font-size: 0.6rem;
+	letter-spacing:0.04em;
+	text-transform: uppercase;
+	margin: 0.3rem 0.2rem 0.28rem 0;
+}
+
+header a {
+	color:#0085b6;
+}
+
+/* ----- LE Specific Styling ----- */
+
+#LE_newsletters {
+	color: #ffe8b8;
+	position:relative;
+	z-index: 1;
+}
+#LE_newsletters::before {
+	content:'';
+	display:block;
+	position:absolute;
+	top:0; right:0; bottom:0; left:0;
+	z-index:-1;
+	background-image:url("i/le_cloudy.jpg");
+	background-size:100% 100%;
+	opacity: 0.12;
+}
+#LE_newsletters::after {
+	content:'';
+	display:block;
+	position:absolute;
+	top:0; right:0; bottom:0; left:0;
+	z-index:-2;
+	background-image:url("i/le_lvtile.png");
+	background-position: top center;
+	background-size:6.4rem 6.4rem;
+}
+#LE_newsletters h2 {
+	text-align: right;
+	margin: -2.9rem 0 0.4rem 11.4rem;
+	width: 22rem;
+}
+
+#LE_newsletters .description {
+	width:16.4rem;
+	margin: 0 0 0 17rem;
+	line-height: 1.25;
+}
+
+#LE_newsletters .collection img {
+	box-shadow: 0 0.2rem 0.3rem rgba(0, 0, 0, 0.6);
+	width:8rem;
+}
+
+#LE_newsletters .tools {
+	margin-top:-3.8rem;
+}
+
+/* ----- APG Specific Styling ----- */
+
+#APG_business_card {
+	color: #3c5e2c;
+	z-index:1;
+	position:relative;
+}
+#APG_business_card::before {
+	content:'';
+	display:block;
+	position:absolute;
+	top:0; right:0; bottom:0; left:0;
+	z-index:-1;
+	background-image:url("i/apa_sidefade.jpg");
+	background-size:100% 100%;
+	opacity: 0.15;
+}
+#APG_business_card::after {
+	content:'';
+	text-align:center;
+	display:block;
+	position:absolute;
+	top:0; right:0; bottom:0; left:0;
+	z-index:-2;
+	background-image:url("i/apa_apgbrand.png"),
+	                 url("i/apa_woodtexture.jpg");
+	background-position: center center,
+	                     center center;
+	background-repeat:no-repeat, no-repeat;
+	background-size:40rem 40rem,
+	                100% 100%;
+}
+#APG_business_card .collection img {
+	box-shadow: 0 0.2rem 0.3rem rgba(0, 0, 0, 0.6);
+	width:16.4rem;
+}
+#APG_business_card .collection p {
+	font-family: "Helvetica Neue", Helvetica, Arial;
+	font-weight: bold;
+	font-size: 0.6rem;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+	text-align: right;
+	color: #3c5e2c;
+	margin:0.3rem 0;
+}
+#APG_business_card h2 {
+	text-align:right;
+	margin:0.3rem 0.2rem 0 0;
+}
+#APG_business_card .tools {
+	margin-top: -3.8rem;
+}
+
+/* ----- BR Specific Styling ----- */
+
+#BR_advertising {
+	background: #537ce5;
+	color: rgb(140,25,30);
+	z-index: 1;
+	position: relative;
+}
+#BR_advertising::before {
+	content:'';
+	display: block;
+	position: absolute;
+	top:0; right:0; bottom:0; left:0;
+	z-index:-1;
+	background-image:url("i/br_waves.jpg");
+	background-size:cover;
+}
+#BR_advertising .collection img {
+	box-shadow: 0 0.2rem 0.3rem rgba(0, 0, 0, 0.6);
+	width:8rem;
+}
+#BR_advertising .collection p {
+	font-family: "Helvetica Neue", Helvetica, Arial;
+	font-weight: bold;
+	font-size: 0.6rem;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+	text-align: right;
+	color: #910b0b;
+	margin:0.3rem 0;
+}
+#BR_advertising .collection a {
+	text-decoration: none;
+}
+#BR_advertising h2 {
+	text-align: right;
+	margin: -4.2rem 0 0.4rem 16.6rem;
+	font-size:1.7rem;
+	width: 16.8rem;
+}
+#BR_advertising .description {
+	width: 16.8rem;
+	margin: 0 0 0 17rem;
+	line-height: 1.25;
+}
+#BR_advertising .tools {
+	margin: -3.8rem 0 0.6rem 0;
+}
+
+/* ----- SS Specific Styling ----- */
+
+#SS_websites {
+	background: #005872;
+	color: #d1f1fb;
+	z-index: 1;
+	position: relative;
+}
+#SS_websites::before {
+	content:'';
+	display:block;
+	position:absolute;
+	top:0; right:0; bottom:0; left:0;
+	z-index: -1;
+	background-image:url("i/ss_blueprint.jpg");
+	background-size: 1.6rem;
+	background-position: center center;
+	opacity: 0.65;
+	border:0.2rem solid #b1d1fb;
+	margin:0.8rem;
+}
+#SS_websites .collection_item {
+	width:8rem;
+}
+#SS_websites .collection_item img {
+	width:8rem;
+}
+#SS_websites .middle {
+	width:16.4rem;
+}
+#SS_websites .collection_item .caption {
+	font-family: "Helvetica Neue", Helvetica, Arial;
+	font-weight: bold;
+	font-size: 0.6rem;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+	text-align: right;
+	color: #eae8f9;
+	margin:0.3rem 0;
+}
+#SS_websites .description {
+	line-height: 1.25;
+	font-family: "Times New Roman";
+	font-size: 0.9rem;
+	line-height:1.25;
+	margin:0.3rem 0 0.4rem 0;
+}
+#SS_websites .tools p {
+	height:1.6rem;
+	float:left;
+	margin:0 0.2rem 0.4rem 0;
+	width:10.8rem;
+}
+#SS_websites .tools p img {
+	width:1.6rem;
+}
+}
