@@ -1,0 +1,95 @@
+<html>
+	<head>
+		<title>SVG Testing</title>
+		<style>
+			body {background:#444;}
+		</style>
+		<script>
+		</script>
+	</head>
+	<body>
+		
+		<svg viewbox="0 0 24 24" width="500" height="500" version="1.1" xmlns="http://www.w3.org/2000/svg">
+			<defs>
+				<clipPath id="the-object">
+	        <path fill="rgb(130, 230, 130)" d="M 12 3
+	             v 7
+	             h 6
+	             l -6 11
+	             v -7
+	             h -6
+	             l 6 -11">
+					</path>
+	      </clipPath>
+	      
+	      <filter id="noise">
+	      	<feTurbulence type="fractalNoise" baseFrequency="1" numOctaves="1" result="noisy" />
+		      <feColorMatrix type="saturate" values="1"/>
+	      </filter>
+	      
+	      <filter id="overlay" color-interpolation-filters="sRGB">
+    
+					<feFlood flood-color="#00a" result="colorfield"/>
+					<feBlend mode="screen" in="colorfield" in2="SourceGraphic" result="screenALL"/>
+					<feBlend mode="multiply" in="colorfield" in2="SourceGraphic" result="multiplyALL"/>
+      
+      
+					<feColorMatrix in="SourceGraphic" type="luminanceToAlpha" result="L2ASource"/>
+					<feColorMatrix in="rainbow" type="luminanceToAlpha" result="L2ARainbow"/>
+					<feComposite operator="arithmetic" in="L2ASource" in2="L2ARainbow" k2="1" k3="-1" result="alphadiff"/>
+      
+					<feComposite operator="in" in="multiplyALL" in2="alphadiff" result="multFINAL"/>
+					<feComposite operator="out" in="SourceGraphic" in2="multiplyMASK" result="screenMASK"/>
+					<feComposite operator="in" in="screenALL" in2="screenMASK" result="screenFINAL"/>
+					<feComposite operator="arithmetic" in="screenFINAL" in2="multFINAL" k2="1" k3="1"/>
+      
+					<feComposite operator="in" in2='SourceGraphic'/>
+  			</filter>
+  			
+  			<filter id="noise_overlay" color-interpolation-filters="sRGB">
+  			
+  				<feTurbulence type="fractalNoise" baseFrequency="1" numOctaves="1" result="noisy" />
+    
+					<feFlood flood-color="#00a" result="colorfield"/>
+					<feBlend mode="screen" in="colorfield" in2="noisy" result="screenALL"/>
+					<feBlend mode="multiply" in="colorfield" in2="noisy" result="multiplyALL"/>
+      
+      
+					<feColorMatrix in="noisy" type="luminanceToAlpha" result="L2ASource"/>
+					<feColorMatrix in="rainbow" type="luminanceToAlpha" result="L2ARainbow"/>
+					<feComposite operator="arithmetic" in="L2ASource" in2="L2ARainbow" k2="1" k3="-1" result="alphadiff"/>
+      
+					<feComposite operator="in" in="multiplyALL" in2="alphadiff" result="multFINAL"/>
+					<feComposite operator="out" in="noisy" in2="multiplyMASK" result="screenMASK"/>
+					<feComposite operator="in" in="screenALL" in2="screenMASK" result="screenFINAL"/>
+					<feComposite operator="arithmetic" in="screenFINAL" in2="multFINAL" k2="1" k3="1"/>
+      
+					<feComposite operator="in" in2='noisy'/>
+  			</filter>
+	      
+	    </defs>
+
+	    <path fill="rgb(225, 225, 120)" d="M 12 3
+	             v 7
+	             h 6
+	             l -6 11
+	             v -7
+	             h -6
+	             l 6 -11">
+	    </path>
+	    
+	    <path filter="url(#noise)" clip-path="url(#the-object)" opacity="1" d="M 12 3
+	             v 7
+	             h 6
+	             l -6 11
+	             v -7
+	             h -6
+	             l 6 -11">
+
+	    
+		</svg>
+		
+		<p>Use noise as a mask. That should work, right? Maybe use tiles to ensure pixel-perfect scaling.</p>
+		
+	</body>
+</html>
