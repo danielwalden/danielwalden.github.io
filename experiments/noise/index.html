@@ -1,0 +1,76 @@
+<html>
+	<head>
+		<title>Noise Experiments</title>
+		<style>
+			body {
+				background-color:grey;
+			}
+			header {
+				height:200px;
+				width:500px;
+				color:#70f0b2;
+				background:#ab8a2b;
+			}
+			
+			/*
+			header::after {
+				content:'';
+				display:block;
+				position:absolute;
+				top:0; right:0; bottom:0; left:0;
+				background:#ab8a2b;
+				z-index: -2;
+				opacity: 1.0;
+			}
+			*/
+			
+			div {
+				width:810px;
+				height:810px;
+				background-image:url(MKBHD_test.png);
+				background-size:540px;
+			}
+			
+			@supports (background-blend-mode:overlay) {
+				/*
+				header::before {
+					content:'';
+					display:block;
+					position:absolute;
+					top:0; right:0; bottom:0; left:0;
+					background:url(noise.gif);
+					mix-blend-mode:overlay;
+					background-size:128px;
+					z-index: -1;
+					opacity:0.25;
+				}
+				*/
+				header {
+					background-color:#ab8a2b, transparent;
+					background-image:none, url(noise_2.gif);
+					background-size:auto, 256px;
+					background-blend-mode:normal, overlay;
+				}
+				
+				div {
+					background-image:url(noise_3.gif), url(MKBHD_test4.jpg);
+					background-size: 256px, 810px;
+					background-blend-mode:overlay, normal;
+				}
+				
+			}
+		</style>
+	</head>
+	<body>
+		
+		<header>
+			<h1>Daniel Walden</h1>
+			<p>Use it as a @supports mix-blend-mode. IE and Edge don't get the benefit, but too bad.</p>
+		</header>
+		
+		<div>
+			<p>MKBHD in the house</p>
+		</div>
+		
+	</body>
+</html>
