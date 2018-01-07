@@ -1,0 +1,57 @@
+<html>
+	<head>
+		<title>CSS Title Effects Experiment</title>
+		<style type="text/css">
+			body { background:#36c; font-family:Gin; margin:4px;}
+			h1 {
+				font-size:72px;
+				color:#b14b23;
+				font-weight:normal;
+				margin:48px;
+				
+				filter:url(#myFilter);
+			}
+		
+		.hideMe {visibility:hidden; position:fixed; top:0; left:0; }
+		</style>
+	</head>
+	<body>
+		
+		<svg version="1.1" class="hideMe">
+			<defs>
+				
+				<filter id="myFilter">
+					<feFlood flood-color="red" result="color-red" />
+					<feComposite in="color-red" in2="SourceAlpha" operator="in" result="step2" />
+					
+					<feMorphology operator="dilate" radius="4" in="SourceAlpha" result="BEVEL_10" />
+					
+					<feGaussianBlur stdDeviation="6" in="SourceAlpha" result="BLUR" />
+					
+					<feFlood flood-color="white" result="color-white" />
+					<feOffSet in="SourceAlpha" dx="-3" dy="3" result="punch-out" />
+					<feComposite in="color-white" in2="SourceAlpha" operator="in" result="highlight-step1" />
+					<feComposite in="highlight-step1" in2="punch-out" operator="out" result="highlight-final" />
+					
+					<feMerge>
+						<feMergeNode in="BLUR" />
+						<feMergeNode in="BEVEL_10" />
+						<feMergeNode in="step2" />
+						<feMergeNode in="highlight-final" />
+					</feMerge>
+					
+				</filter>
+				
+			</defs>
+			
+			
+		</svg>
+		
+		<h1><em>The Quick Brown Fox Jumped Over the Lazy Dog...</em></h1>
+		
+		<p>So, Safari doesn't support feImage or feConvolveMatrix or feSpecular</p>
+		
+		<p>feimage for inline gradents and patterns may be possible with encoding - see the latest bookmark</p>
+
+	</body>
+</html>
