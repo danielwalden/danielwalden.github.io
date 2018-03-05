@@ -1,0 +1,46 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="500" height="250">
+			<defs>
+				
+				<filter id="myFilter">
+					<feFlood flood-color="red" result="color-red" />
+					<feComposite in="color-red" in2="SourceAlpha" operator="in" result="step2" />
+					
+					<feMorphology operator="dilate" radius="4" in="SourceAlpha" result="BEVEL_10" />
+					
+					<feGaussianBlur stdDeviation="6" in="SourceAlpha" result="BLUR" />
+					
+					<feFlood flood-color="white" result="color-white" />
+					<feOffSet in="SourceAlpha" dx="-3" dy="3" result="punch-out" />
+					<feComposite in="color-white" in2="SourceAlpha" operator="in" result="highlight-step1" />
+					<feComposite in="highlight-step1" in2="punch-out" operator="out" result="highlight-final" />
+					
+					<feMerge>
+						<feMergeNode in="BLUR" />
+						<feMergeNode in="BEVEL_10" />
+						<feMergeNode in="step2" />
+						<feMergeNode in="highlight-final" />
+						<feMergeNode in="SourceGraphic" />
+						<feMergeNode in="highlight-final" />
+					</feMerge>
+					
+				</filter>
+				
+				<filter id="myFilter2">
+					
+					<feColorMatrix in="SourceGraphic"
+        type="matrix"
+        values="0 0 0 0 0
+                1 1 1 1 0
+                0 0 0 0 0
+                0 0 0 1 0" />
+					
+				</filter>
+				
+			</defs>
+			
+			<rect x="5" y="5" width="100" height="100" fill="blue" filter="url(#myFidlter)" />
+			<text x="0" y="35" font-family="Verdana" font-size="35" filter="url(#myFilter2)" id="hoopla">
+				Hello, out there
+			</text>
+			
+		</svg>

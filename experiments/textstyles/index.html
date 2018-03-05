@@ -5,9 +5,14 @@
 			body { background:#36c; font-family:Gin; margin:4px;}
 			h1 {
 				font-size:72px;
-				color:#b14b23;
 				font-weight:normal;
 				margin:48px;
+				
+				color:transparent;
+				background:url(icon_photoshop.png);
+				-webkit-background-clip: text;
+				-moz-background-clip: text;
+				background-clip: text;
 				
 				filter:url(#myFilter);
 			}
@@ -38,20 +43,50 @@
 						<feMergeNode in="BEVEL_10" />
 						<feMergeNode in="step2" />
 						<feMergeNode in="highlight-final" />
+						<feMergeNode in="SourceGraphic" />
+						<feMergeNode in="highlight-final" />
 					</feMerge>
+					
+				</filter>
+				
+				<filter id="myFilter2">
+					
+					<feColorMatrix in="SourceGraphic"
+        type="matrix"
+        values="0 0 0 0 0
+                1 1 1 1 0
+                0 0 0 0 0
+                0 0 0 1 0" />
 					
 				</filter>
 				
 			</defs>
 			
 			
+			<g id="hoopla2">
+				<text x="0" y="35" font-family="Verdana" font-size="35" filter="url(#myFilter2)" id="hoopla">
+					Hello, out there
+				</text>
+				
+				<rect x="50" y="50" width="100" height="100" fill="red" filter="url(#myFilter)" />
+			</g>
+			
 		</svg>
 		
 		<h1><em>The Quick Brown Fox Jumped Over the Lazy Dog...</em></h1>
-		
 		<p>So, Safari doesn't support feImage or feConvolveMatrix or feSpecular</p>
-		
 		<p>feimage for inline gradents and patterns may be possible with encoding - see the latest bookmark</p>
+								
+		<p>Also, the SVG has to be inline due to WebKit weirdness. Sigh... You could load it via JS for caching.</p>
+		
+		<p>TO DO: Make a little script that loads the SVG and puts it at the top of the body.</p>
+		
+		<svg width="500" height="500">
+			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hoopla2"></use>
+		</svg>
+		
+		<div style="width:100px; height:100px; color:purple; font-size:128px; filter:url(#myFilter);">Hello</div>
+
 
 	</body>
 </html>

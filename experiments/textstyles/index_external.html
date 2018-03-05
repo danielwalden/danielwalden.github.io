@@ -1,0 +1,30 @@
+<html>
+	<head>
+		<title>CSS Title Effects Experiment</title>
+		<style type="text/css">
+			body { background:#36c; font-family:Gin; margin:4px;}
+			h1 {
+				font-size:72px;
+				font-weight:normal;
+				margin:48px;
+				
+				color:black;
+			
+				
+				filter:url(test.svg#myFilter);
+			}
+		
+		.hideMe {visibility:hidden; position:fixed; top:0; left:0; }
+		</style>
+	</head>
+	<body>
+				
+			<svg><use xlink:href="test.svg#hoopla"></use></svg>
+				
+		<h1><em>The Quick Brown Fox Jumped Over the Lazy Dog...</em></h1>
+		<p>So, Safari doesn't support feImage or feConvolveMatrix or feSpecular</p>
+		<p>feimage for inline gradents and patterns may be possible with encoding - see the latest bookmark</p>
+
+
+	</body>
+</html>
