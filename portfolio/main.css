@@ -27,7 +27,7 @@ body {
 /* NEED TO FIX THE SCROLLING TO THE RIGHT ISSUE. ALSO TEST ON FF IE. */
 
 @media only screen and (min-width: 678px) {
-	
+
 body {
 	margin: 0;
 	background: #333;
@@ -105,7 +105,7 @@ a img {border:0;}
 header, #LE_newsletters, #APG_business_card, #BR_advertising, #SS_websites {
 	width: 960px;
 	margin: 0 auto;
-	
+
 }
 
 /* ----- Header Specific Styling ----- */
