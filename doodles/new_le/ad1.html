@@ -1,0 +1,215 @@
+<html><head><style type="text/css">
+    @-webkit-keyframes background_tile_scroll {
+        0%      { -webkit-transform: rotate(-20deg) translateX(-302px); }
+        100%    { -webkit-transform: rotate(-20deg) translateX(0px); }
+    }
+    @-webkit-keyframes showinfo_purse1 {
+        0%      { opacity: 1.0; }
+        40%     { opacity: 1.0; }
+        55%     { opacity: 0.0; }
+        85%     { opacity: 0.0; }
+        100%    { opacity: 1.0; }
+    }
+    @-webkit-keyframes showinfo_purse2 {
+        0%      { width:290px; top:40px; left:550px; }
+        40%      { width:290px; top:40px; left:550px; }
+        55%      { width:380px; top:-80px; left:20px; }
+        85%      { width:380px; top:-80px; left:20px; }
+        100%    { width:290px; top:40px; left:550px; }
+    }
+    @-webkit-keyframes showinfo_purse22 {
+        0%      { -webkit-transform: scale(1) translateX(0px) translateY(0px); }
+        40%      { -webkit-transform: scale(1) translateX(0px) translateY(0px); }
+        55%      { -webkit-transform: scale(1.2) translateX(-400px) translateY(-50px); }
+        85%      { -webkit-transform: scale(1.2) translateX(-400px) translateY(-50px); }
+        100%    { -webkit-transform: scale(1) translateX(0px) translateY(0px); }
+    }
+    @-webkit-keyframes showinfo_purse3 {
+        0%      { opacity: 1.0; }
+        40%     { opacity: 1.0; }
+        55%     { opacity: 0.0; }
+        85%     { opacity: 0.0; }
+        100%    { opacity: 1.0; }
+    }
+    @-webkit-keyframes showinfo_purse2info {
+        0%      { opacity: 0.0; }
+        40%      { opacity: 0.0; }
+        55%     { opacity: 1.0; }
+        85%      { opacity: 1.0; }
+        100%    { opacity: 0.0; }
+    }
+    body {
+        margin:0;
+        font-family: Futura;
+        color:rgba(105, 90, 58, 1);
+    }
+    #holder {
+        width:100%;
+        height:600px;
+        background:#ccc;
+        overflow:hidden;
+        position: absolute;
+    }
+    #frame_main {
+        width:1000px;
+        margin:0 auto;
+        position:relative;
+    }
+    #le_logo {
+        position:absolute;
+        top:20px;
+        left:50px;
+        width:400px;
+        height:auto;
+    }
+    #background { z-index: -1; }
+    #background_gradient {
+        width:100%;
+        height:100%;
+        position:absolute;
+        top:0;
+        left:0;
+        background: linear-gradient(
+			35deg,
+			rgba(240,240,240,0) 0%,
+			rgba(240,240,240,1) 65%,
+			rgba(240,240,240,1) 100%
+		);
+    }
+    #background_tile {
+        width:200%;
+        height:220%;
+        position:absolute;
+        top:-100%;
+        left:-25%;
+        background:url(tilebackground.png);
+        -webkit-animation-name: background_tile_scroll;
+        -webkit-animation-duration: 5s;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-direction: normal;
+        -webkit-animation-timing-function: linear;
+    }
+    #purses {width:100%; position:relative; top:320px; margin:0 auto;}
+    #purse1 {
+        z-index:6;
+        width:350px;
+        height:auto;
+        position:absolute;
+        top:5px;
+        left:20px;
+        -webkit-animation-name: showinfo_purse1;
+        -webkit-animation-duration: 10s;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-direction: normal;
+        -webkit-animation-timing-function: ease;
+    }
+    #purse2 {
+        z-index:6;
+        width:290px;
+        height:auto;
+        position:absolute;
+        top:40px;
+        left:550px;
+        -webkit-animation-name: showinfo_purse22;
+        -webkit-animation-duration: 10s;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-direction: normal;
+        -webkit-animation-timing-function: ease;
+        -webkit-transform: scale(1) translateX(0px) translateY(0px);
+    }
+    #purse3 {
+        z-index:5;
+        width:350px;
+        height:auto;
+        position:absolute;
+        top:-160px;
+        left:270px;
+        -webkit-animation-name: showinfo_purse3;
+        -webkit-animation-duration: 10s;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-direction: normal;
+        -webkit-animation-timing-function: ease;
+    }
+    #purse2info {
+        z-index:7;
+        width:350px;
+        height:auto;
+        position:absolute;
+        top:250px;
+        left:420px;
+        -webkit-animation-name: showinfo_purse2info;
+        -webkit-animation-duration: 10s;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-direction: normal;
+        -webkit-animation-timing-function: ease;
+    }
+    #bottomholder {
+        width:100%;
+        position:absolute;
+        top:600px;
+    }
+    .bottomsection {
+        width:29%;
+        float:left;
+        padding:0 2%;
+    }
+    h3 {font-size:32px;}
+    p {font-family:times; line-height:1.5;}
+    
+</style></head><body><div id="holder">
+    
+    <div id="background">
+        <div id="background_tile"></div>
+        
+        <div id="background_gradient"></div>
+    </div>
+    
+    <div id="frame_main">
+    
+        <img src="newlogo.png" id="le_logo" />
+        
+        <div id="purse2info">
+            <h2><em>COCO CHANEL HANDBAG</em></h2>
+            <p>More information here...</p>
+        </div>
+                
+        <div id="purses">
+        
+            <img src="purse1.png" id="purse1" />
+            
+            <img src="purse2.png" id="purse2" />
+            
+            <img src="purse3.png" id="purse3" />
+        
+        </div>
+    
+    </div>
+    
+</div>
+
+<div id="bottomholder">
+    <div class="bottomsection">
+        <h3><em>AUTHENTICITY</em></h3>
+        <p>LuxExchange, Inc. guarantees the Authenticity of every item we sell.  If for any reason you are not happy with our service or the item you received, please return the item to us within 20 days from the date it was received...</p>
+    </div>
+    <div class="bottomsection">
+        <h3><em>SELL YOUR BAG</em></h3>
+        <p>Our goal is to sell your luxury item quickly while bringing the best value within the pre-owned luxury market. With our effective merchandising and market reach, 80% or our luxury items sell within 60 days...</p>
+    </div>
+    <div class="bottomsection">
+        <h3><em>CONTACT US</em></h3>
+        <p>luxexchange@hotmail.com<br /><br />
+
+36150 Emerald Coast Parkway<br />
+Suite 103<br />
+Destin, FL 32541<br /><br />
+
+(850) 424-7772</p>
+    </div>
+</div>
+
+<script>
+    
+    background_tile = document.getElementById('background_tile');
+    
+</script></body></html>
