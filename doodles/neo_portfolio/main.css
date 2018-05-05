@@ -1,7 +1,7 @@
 body {
   width:720px;
   margin:0 auto;
-  font-family:"franklin-gothic-urw", Helvetica Neue, Arial, sans-serif;
+  font-family:"franklin-gothic-urw", "Helvetica Neue", Arial, sans-serif;
   color:white;
   background:linear-gradient(to right, rgb(155,33,38) 40%, rgb(36,36,36) 60%);
   -ms-text-size-adjust: none;
@@ -18,8 +18,8 @@ body {
   left:0;
   right:0;
   box-shadow: 0 8px 8px rgba(0,0,0,0.35);
-  padding:15px 0 0 0;
-  height:80px;
+  padding:8px 0 0 0;
+  height:72px;
   line-height: 1.25;
 }
 #topper h1 {
@@ -72,7 +72,7 @@ body {
 }
 .entry p {
   font-family: "chaparral-pro", serif;
-  font-size:14px;
+  font-size:15px;
   line-height: 1.5;
 }
 .entry::after {
@@ -101,7 +101,6 @@ body {
   width:30px;
   float:left;
   margin:0 8px 0 0;
-  box-shadow: 0 4px 4px rgba(0,0,0,0.35);
 }
 .tools p {
   font-family: "franklin-gothic-urw", Helvetica Neue, Arial, sans-serif;
