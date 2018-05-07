@@ -57,21 +57,22 @@ body {
   clear:both;
 }
 
+.gallery {
+  display:flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content:space-between;
+  overflow: hidden;
+}
 .gallery .fullsize {
-  width:100%;
   margin:0 0 8px 0;
+  width:100%;
   display:block;
 }
 .gallery .thumbnail {
-  width:31%;
-  margin:0 1%;
+  width:31.5%;
   display:block;
-  float:left;
-}
-.gallery::after {
-  content:'';
-  display:block;
-  clear:both;
 }
 
 .tools img {
