@@ -2,7 +2,7 @@ body {
   margin:0;
   font-family:"franklin-gothic-urw", "Helvetica Neue", Arial, sans-serif;
   color:white;
-  background:linear-gradient(to right, rgb(155,33,38) 0px, rgb(155,33,38) 9px, rgb(101,21,25) 12px, rgb(36,36,36) 12px);
+  background:linear-gradient(to right, rgb(155,33,38) 0px, rgb(155,33,38) 6px, rgb(101,21,25) 12px, rgb(36,36,36) 12px);
 }
 
 #topper {

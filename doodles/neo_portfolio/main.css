@@ -118,3 +118,21 @@ body {
   text-align:center;
   text-transform: uppercase;
 }
+
+@media only screen and (min-width: 1024px) {
+
+  body { width:1020px; }
+  #topper {height:82px;}
+  #topper h1 { width:990px; font-size:35px; }
+  #topper p { width:986px; font-size:24px; }
+  #content { padding: 90px 0 0 0; }
+  .entry h2 {font-size: 35px;}
+  .entry p { font-size:18px; margin: 0 0 20px 0;}
+  .gallery { width:630px; }
+  .gallery .fullsize { width:600px; }
+  .gallery .thumbnail { width:190px; }
+  .tools { width:300px; display:inline-block; }
+  .tools img { margin:0 4px 0 0; }
+  .tools p { font-size:14px; float:left; width:50%; margin: 0 0 30px 0;}
+
+}
