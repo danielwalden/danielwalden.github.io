@@ -13,11 +13,11 @@ window.onload = function() {
 	scene = new THREE.Scene();
 
 	camera = new THREE.PerspectiveCamera( 75, window.innerWidth / (window.innerHeight /* + 96 */ ), 0.1, 1000 );
-	
+
 	tanFOV = Math.tan( ( ( Math.PI / 180 ) * camera.fov / 2 ) );
 	windowHeight = window.innerHeight;
 
-	renderer = new THREE.WebGLRenderer();
+	renderer = new THREE.WebGLRenderer( { alpha: true; } );
 	renderer.setSize( window.innerWidth, window.innerHeight /* + 96 */ );
 	document.body.appendChild( renderer.domElement );
 
@@ -26,19 +26,23 @@ window.onload = function() {
 	var material = new THREE.MeshLambertMaterial( { color:0x00ff00 } );
 	cube = new THREE.Mesh( geometry, material );
 	scene.add( cube );
-	
+
 	// add subtle ambient lighting
     var ambientLight = new THREE.AmbientLight(0x0000ff);
     scene.add(ambientLight);
-      
+
     // directional lighting
     var directionalLight = new THREE.DirectionalLight(0xffffff);
     directionalLight.position.set(1, 1, 1).normalize();
     scene.add(directionalLight);
 
-	renderer.setClearColor( 0x00ccff, 1);
+		//needed for transparency
+		scene.background = new THREE.Color( 0xff0000 );
+
+	//renderer.setClearColor( 0x00ccff, 1);
+	renderer.setClearColor( 0x000000, 0);
 	camera.position.z = 5;
-	
+
 	renderer.render(scene, camera);
 
 /*
@@ -53,13 +57,13 @@ window.onload = function() {
 
 	render();
 */
-	
+
 }
 
 window.onresize = function() {
 	renderer.setSize( window.innerWidth, window.innerHeight /* + 96 */ );
 	camera.aspect = window.innerWidth / (window.innerHeight /* + 96 */ );
-	
+
 	camera.fov = ( 360 / Math.PI ) * Math.atan( tanFOV * ( window.innerHeight / (windowHeight /* + 96 */ )) );
 
 	camera.updateProjectionMatrix();

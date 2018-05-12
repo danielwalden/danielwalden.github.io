@@ -24,7 +24,7 @@ body {
 }
 #topper h1 {
   font-size: 30px;
-  letter-spacing: 5px;
+  letter-spacing: 4px;
   color:rgb(170,48,49);
   text-transform:uppercase;
   width:690px;
@@ -64,7 +64,7 @@ body {
   color:rgb(48, 180, 100);
   text-transform:uppercase;
   font-size:30px;
-  letter-spacing: 5px;
+  letter-spacing: 4px;
   text-align: right;
   margin:15px 0;
 }
