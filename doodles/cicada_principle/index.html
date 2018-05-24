@@ -1,0 +1,48 @@
+<html><head><title>Cicada Principle Examples</title><style type="text/css">
+	
+body {background:#ddd;}
+
+#pattern_1 {
+	width:100%;
+	height:512px;
+	border:1px solid #333;
+	overflow:scroll;
+	position:relative;
+	z-index:1;
+	background:red;
+}
+#pattern_1::after {
+	content:'';
+	display:block;
+	position:absolute;
+	top:0;
+	left:0;
+	width:4096px;
+	height:4096px;
+	z-index:2;
+	background:green;
+}
+#pattern_1::before {
+	content:'';
+	display:block;
+	position:absolute;
+	top:0;
+	left:0;
+	width:4096px;
+	height:4096px;
+	z-index:3;
+	background:blue;
+}
+
+</style></head><body>
+	
+<h1>Cicada Principle Patterns</h1>
+
+<p>Based on <a href="https://www.sitepoint.com/the-cicada-principle-and-why-it-matters-to-web-designers">The Cicada Principle and Why It Matters to Web Designers</a>.<br>All artwork by me (<a href="danielwalden.org">Daniel Walden</a>) unless otherwise noted.</p>
+
+<h2>Uno</h2>
+<div id="pattern_1"></div>
+
+<h2>Inspired by The Legend of Zelda: Breath of the Wild</h2>
+
+</body></html>
