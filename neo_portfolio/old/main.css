@@ -1,0 +1,138 @@
+body {
+  width:720px;
+  margin:0 auto;
+  font-family:"franklin-gothic-urw", "Helvetica Neue", Arial, sans-serif;
+  color:white;
+  background:linear-gradient(to right, rgb(155,33,38) 40%, rgb(36,36,36) 60%);
+  -ms-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  -o-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+}
+
+#topper {
+  background:linear-gradient(to right, rgb(48,180,100), rgb(0,168,196));
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  box-shadow: 0 8px 8px rgba(0,0,0,0.35);
+  padding:8px 0 0 0;
+  height:72px;
+  line-height: 1.25;
+  text-align:right;
+}
+#topper h1 {
+  font-size: 30px;
+  letter-spacing: 4px;
+  color:rgb(170,48,49);
+  text-transform:uppercase;
+  width:690px;
+  margin:0 auto;
+  padding:0 30px 0 0;
+}
+#topper p {
+  font-size:20px;
+  letter-spacing:2px;
+  color:white;
+  text-transform: uppercase;
+  width: 686px;
+  margin:0 auto;
+  padding:0 34px 0 0;
+}
+#topper a {
+  color:white;
+}
+
+#content {
+  background:linear-gradient(to right, rgb(155,33,38) 0px, rgb(155,33,38) 22px, rgb(101,21,25) 30px, rgb(36,36,36) 30px);
+  padding:80px 0 0 0;
+}
+#content::after {
+  content:'';
+  display:block;
+  clear:both;
+  height:30px;
+}
+
+.entry {
+  padding:0 30px 0 60px;
+  margin:0 0 45px 0;
+  clear:both;
+}
+.entry h2 {
+  color:rgb(48, 180, 100);
+  text-transform:uppercase;
+  font-size:30px;
+  letter-spacing: 4px;
+  text-align: right;
+  margin:15px 0;
+}
+.entry p {
+  font-family: "chaparral-pro", serif;
+  font-size:15px;
+  line-height: 1.5;
+}
+.entry::after {
+  content:'';
+  display:block;
+  clear:both;
+}
+
+.gallery {
+  width:450px;
+  float:left;
+}
+.gallery .fullsize {
+  width:420px;
+  box-shadow: 0 4px 4px rgba(0,0,0,0.35);
+  margin:0 0 15px 0;
+  display:block;
+}
+.gallery .thumbnail {
+  width:130px;
+  box-shadow: 0 4px 4px rgba(0,0,0,0.35);
+  padding:0;
+  display:block;
+  float:left;
+  margin:0 15px 0 0;
+}
+
+.tools img {
+  width:30px;
+  float:left;
+  margin:0 8px 0 0;
+}
+.tools p {
+  font-family: "franklin-gothic-urw", Helvetica Neue, Arial, sans-serif;
+  text-transform: uppercase;
+  font-size:14px;
+  color:rgb(0,168,196);
+  letter-spacing: 1px;
+  line-height: 1.15;
+  margin:15px 0 0 0;
+}
+
+#footer {
+  clear:both;
+  text-align:center;
+  text-transform: uppercase;
+}
+
+@media only screen and (min-width: 1024px) {
+
+  body { width:1020px; }
+  #topper {height:82px;}
+  #topper h1 { width:990px; font-size:35px; }
+  #topper p { width:986px; font-size:24px; }
+  #content { padding: 90px 0 0 0; }
+  .entry h2 {font-size: 35px;}
+  .entry p { font-size:18px; margin: 0 0 20px 0;}
+  .gallery { width:630px; }
+  .gallery .fullsize { width:600px; }
+  .gallery .thumbnail { width:190px; }
+  .tools { width:300px; display:inline-block; }
+  .tools img { margin:0 4px 0 0; }
+  .tools p { font-size:14px; float:left; width:50%; margin: 0 0 30px 0;}
+
+}
