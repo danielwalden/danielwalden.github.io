@@ -3,7 +3,9 @@ body {
   margin:0 auto;
   font-family:"franklin-gothic-urw", "Helvetica Neue", Arial, sans-serif;
   color:white;
-  background:linear-gradient(to right, rgb(155,33,38) 40%, rgb(36,36,36) 60%);
+  background:url(i/main_bg.svg);
+  background-size: 2560px 64px;
+  background-position: center top;
   -ms-text-size-adjust: none;
   -moz-text-size-adjust: none;
   -o-text-size-adjust: none;
@@ -45,7 +47,6 @@ body {
 }
 
 #content {
-  background:linear-gradient(to right, rgb(155,33,38) 0px, rgb(155,33,38) 22px, rgb(101,21,25) 30px, rgb(36,36,36) 30px);
   padding:80px 0 0 0;
 }
 #content::after {
