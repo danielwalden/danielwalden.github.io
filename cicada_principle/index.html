@@ -55,6 +55,18 @@ body {background:#ddd;}
 	background:url(reaction-diffusion-1.gif);
 	background-size:512px;
 }
+.reaction_diffusion_2::after {
+	content:'';
+	display:block;
+	position:absolute;
+	top:0;
+	left:0;
+	width:4096px;
+	height:4096px;
+	z-index:2;
+	background:url(reaction-diffusion-2.gif);
+	background-size:512px 256px;
+}
 
 </style></head><body>
 	
@@ -62,17 +74,28 @@ body {background:#ddd;}
 
 <p>Based on <a href="https://www.sitepoint.com/the-cicada-principle-and-why-it-matters-to-web-designers">The Cicada Principle and Why It Matters to Web Designers</a>.<br>All artwork by me (<a href="danielwalden.org">Daniel Walden</a>) unless otherwise noted.</p>
 
+<!--
 <h2>Uno</h2>
 <div class="pattern_1"></div>
 
 <p>Inspired by The Legend of Zelda: Breath of the Wild</p>
+-->
+
 
 <h1>Normal Patterns</h1>
+
 
 <h2>Reaction Diffusion 1</h2>
 
 <div class="pattern_normal reaction_diffusion_1"></div>
 
 <p>A standard reaction diffusion pattern, tweaked in Photoshop to tile correctly.</p>
+
+
+<h2>Reaction Diffusion 2</h2>
+
+<div class="pattern_normal reaction_diffusion_2"></div>
+
+<p>A dot-like reaction diffusion pattern created via <a href="https://pmneila.github.io/jsexp/grayscott/">this web tool</a>.</p>
 
 </body></html>
